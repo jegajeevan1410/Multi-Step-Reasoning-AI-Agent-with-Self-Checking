@@ -2,6 +2,8 @@
 
 An agent that solves math, logic and scheduling problems in three stages: **Plan → Execute → Verify**. If the verifier rejects an answer, the agent retries with the verifier's feedback (up to `max_retries`).
 
+**Live demo:** https://multi-step-reasoning-ai-agent-with-self-checking-7g8ukshz5wfvz.streamlit.app/
+
 For each question it returns:
 - **answer**: the final result
 - **reasoning_visible_to_user**: the working, in short
@@ -113,3 +115,4 @@ Full logs with checks are in [`MultiStepReasoningAgent/example_run_logs.txt`](Mu
 ## Author
 
 **V. Jegajeevan**: [GitHub](https://github.com/jegajeevan1410) · [LinkedIn](https://www.linkedin.com/in/jegajeevan1410)
+
