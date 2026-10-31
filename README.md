@@ -113,5 +113,3 @@ Full logs with checks are in [`MultiStepReasoningAgent/example_run_logs.txt`](Mu
 ## Author
 
 **V. Jegajeevan**: [GitHub](https://github.com/jegajeevan1410) · [LinkedIn](https://www.linkedin.com/in/jegajeevan1410)
-
-Based on the original project by [Gopinath Chinnadurai](https://github.com/Gopinath-chinnadurai). MIT License.
