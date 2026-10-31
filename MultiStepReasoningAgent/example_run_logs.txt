@@ -1,0 +1,207 @@
+==================== Example Run 1 ====================
+Input:
+45 - 18 + 6
+
+Output:
+{
+  "answer": "33",
+  "status": "success",
+  "reasoning_visible_to_user": "45 - 18 + 6 = 33 (order of operations: brackets, then * and /, then + and -)",
+  "metadata": {
+    "problem_type": "arithmetic",
+    "checks": [
+      {
+        "check_name": "recalculate",
+        "passed": true,
+        "details": "Recalculated 45 - 18 + 6 = 33, answer = 33.0"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 2 ====================
+Input:
+12 * 4 / 3
+
+Output:
+{
+  "answer": "16",
+  "status": "success",
+  "reasoning_visible_to_user": "12 * 4 / 3 = 16 (order of operations: brackets, then * and /, then + and -)",
+  "metadata": {
+    "problem_type": "arithmetic",
+    "checks": [
+      {
+        "check_name": "recalculate",
+        "passed": true,
+        "details": "Recalculated 12 * 4 / 3 = 16.0, answer = 16.0"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 3 ====================
+Input:
+Ravi has 5 pencils and three times as many pens. How many items does he have in total?
+
+Output:
+{
+  "answer": "20 items",
+  "status": "success",
+  "reasoning_visible_to_user": "First amount = 5; Second amount = 5 x 3 = 15; Total = 5 + 15 = 20",
+  "metadata": {
+    "problem_type": "word_problem",
+    "checks": [
+      {
+        "check_name": "recalculate",
+        "passed": true,
+        "details": "Expected 20, answer = 20.0"
+      },
+      {
+        "check_name": "not_negative",
+        "passed": true,
+        "details": "Counts can't be negative"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 4 ====================
+Input:
+Alice has 3 red apples and twice as many green apples. How many apples does she have in total?
+
+Output:
+{
+  "answer": "9 apples",
+  "status": "success",
+  "reasoning_visible_to_user": "First amount = 3; Second amount = 3 x 2 = 6; Total = 3 + 6 = 9",
+  "metadata": {
+    "problem_type": "word_problem",
+    "checks": [
+      {
+        "check_name": "recalculate",
+        "passed": true,
+        "details": "Expected 9, answer = 9.0"
+      },
+      {
+        "check_name": "not_negative",
+        "passed": true,
+        "details": "Counts can't be negative"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 5 ====================
+Input:
+2, 4, 8, 16, _
+
+Output:
+{
+  "answer": "32",
+  "status": "success",
+  "reasoning_visible_to_user": "Differences = [2, 4, 8] (not constant); Ratio = 2 (constant); Next = 16 x 2 = 32",
+  "metadata": {
+    "problem_type": "sequence",
+    "checks": [
+      {
+        "check_name": "pattern_continues",
+        "passed": true,
+        "details": "Full sequence with answer: [2, 4, 8, 16, 32.0]"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 6 ====================
+Input:
+If a train leaves at 14:30 and arrives at 18:05, how long is the journey?
+
+Output:
+{
+  "answer": "3 hours 35 minutes",
+  "status": "success",
+  "reasoning_visible_to_user": "Start = 870 min; End = 1085 min; Duration = 1085 - 870 = 215 min",
+  "metadata": {
+    "problem_type": "time_difference",
+    "checks": [
+      {
+        "check_name": "start_plus_duration_equals_end",
+        "passed": true,
+        "details": "870 + 215 min should land on 1085 min"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 7 ====================
+Input:
+A train leaves at 23:50 and arrives at 00:20. How long is the journey?
+
+Output:
+{
+  "answer": "30 minutes",
+  "status": "success",
+  "reasoning_visible_to_user": "Start = 1430 min; End = 20 min; Duration = 20 - 1430 = 30 min (+24 h, crosses midnight)",
+  "metadata": {
+    "problem_type": "time_difference",
+    "checks": [
+      {
+        "check_name": "start_plus_duration_equals_end",
+        "passed": true,
+        "details": "1430 + 30 min should land on 20 min"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
+==================== Example Run 8 ====================
+Input:
+A call needs 45 minutes. Free slots are: 10:00–10:30, 13:15–14:00, 15:00–16:30. Which slots can fit the call?
+
+Output:
+{
+  "answer": "13:15–14:00 and 15:00–16:30",
+  "status": "success",
+  "reasoning_visible_to_user": "Needed = 45 min; 10:00–10:30 = 30 min (too short); 13:15–14:00 = 45 min (fits); 15:00–16:30 = 90 min (fits)",
+  "metadata": {
+    "problem_type": "scheduling",
+    "checks": [
+      {
+        "check_name": "every_listed_slot_is_long_enough",
+        "passed": true,
+        "details": "Listed: ['13:15–14:00', '15:00–16:30']"
+      },
+      {
+        "check_name": "no_fitting_slot_missed",
+        "passed": true,
+        "details": "Slots that fit: ['13:15–14:00', '15:00–16:30']"
+      }
+    ],
+    "retries": 0
+  }
+}
+
+-------------------------------------------------------
+
